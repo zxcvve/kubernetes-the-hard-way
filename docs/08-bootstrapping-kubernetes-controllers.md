@@ -43,7 +43,7 @@ Install the Kubernetes binaries:
   chmod +x kube-apiserver \
     kube-controller-manager \
     kube-scheduler kubectl
-    
+
   mv kube-apiserver \
     kube-controller-manager \
     kube-scheduler kubectl \
@@ -111,17 +111,16 @@ mv kube-scheduler.service /etc/systemd/system/
 ```bash
 {
   systemctl daemon-reload
-  
+
   systemctl enable kube-apiserver \
     kube-controller-manager kube-scheduler
-    
+
   systemctl start kube-apiserver \
     kube-controller-manager kube-scheduler
 }
 ```
 
 > Allow up to 10 seconds for the Kubernetes API Server to fully initialize.
-
 
 ### Verification
 
@@ -173,7 +172,7 @@ curl -k --cacert ca.crt https://server.kubernetes.local:6443/version
   "buildDate": "2024-10-22T20:28:14Z",
   "goVersion": "go1.22.8",
   "compiler": "gc",
-  "platform": "linux/arm64"
+  "platform": "linux/amd64"
 }
 ```
 
